@@ -1,0 +1,101 @@
+/* Base styles (mobile first) */
+body {
+    background-color: #dfff00; /* Light lime green */
+    color: #006400; /* Dark green for text */
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #32cd32; /* Lime green */
+    padding: 1em;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 1em;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: #006400; /* Dark green */
+  }
+  
+  .title-container {
+    border: solid #006400; /* Dark green */
+    height: 40vh;
+    margin: 1em;
+    font-size: 5vw;
+    text-align: center;
+    color: #32cd32; /* Lime green */
+  }
+  
+  .hero-image {
+    border: solid #006400; /* Dark green */
+    height: 40vh;
+    background-image: url("https://t3.ftcdn.net/jpg/05/61/10/64/360_F_561106480_HxVfagn7jLyyHyIZ4lAcDgdsydhtp4jR.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin: 1em;
+  }
+  
+  .logo {
+    width: 250px;
+    height: auto;
+    margin: 2em;
+    transition: all 0.3s ease;
+    border: solid #32cd32; /* Lime green */
+  }
+  
+  footer {
+    background-color: #32cd32; /* Lime green */
+    padding: 1em;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Tablet styles */
+  @media (min-width: 881px) {
+    body {
+      background-color: #adff2f; /* Green-yellow */
+      color: #006400; /* Dark green */
+    }
+  
+    .hero-image {
+      background-image: url("https://media.istockphoto.com/id/948032164/photo/ice-cream.jpg?s=612x612&w=0&k=20&c=EWy8rEsWVuv67-DWH0a-rAlI7GSy1FAU237yg1TwFKg=");
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 1481px) {
+    body {
+      background-color: #7fff00; /* Chartreuse */
+      color: #006400; /* Dark green */
+    }
+  
+    .hero-image {
+      background-image: url("https://t3.ftcdn.net/jpg/01/94/58/96/360_F_194589639_QrC7pzqnyPtzlSNydJT7QDrWWO0kd1dt.jpg");
+    }
+  
+    .logo {
+      width: 33%;
+    }
+  }
