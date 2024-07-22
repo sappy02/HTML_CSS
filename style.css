@@ -1,101 +1,149 @@
-/* Base styles (mobile first) */
+/* Base styles */
 body {
-    background-color: #dfff00; /* Light lime green */
-    color: #006400; /* Dark green for text */
     font-family: Arial, sans-serif;
-  }
-  
-  header {
-    background-color: #32cd32; /* Lime green */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #32cd32;
     padding: 1em;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 1em;
-  }
-  
-  nav ul li a {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    color: #006400; /* Dark green */
-  }
-  
-  .title-container {
-    border: solid #006400; /* Dark green */
-    height: 40vh;
-    margin: 1em;
-    font-size: 5vw;
-    text-align: center;
-    color: #32cd32; /* Lime green */
-  }
-  
-  .hero-image {
-    border: solid #006400; /* Dark green */
-    height: 40vh;
-    background-image: url("https://t3.ftcdn.net/jpg/05/61/10/64/360_F_561106480_HxVfagn7jLyyHyIZ4lAcDgdsydhtp4jR.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .logo-container {
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #006400;
+}
+
+main {
+    flex: 1;
+    padding: 2em;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 40vh;
-    margin: 1em;
-  }
-  
-  .logo {
-    width: 250px;
-    height: auto;
-    margin: 2em;
-    transition: all 0.3s ease;
-    border: solid #32cd32; /* Lime green */
-  }
-  
-  footer {
-    background-color: #32cd32; /* Lime green */
-    padding: 1em;
-    text-align: center;
+}
+
+footer {
+    background-color: #32cd32;
     color: white;
-  }
-  
-  /* Tablet styles */
-  @media (min-width: 881px) {
-    body {
-      background-color: #adff2f; /* Green-yellow */
-      color: #006400; /* Dark green */
+    text-align: center;
+    padding: 1em;
+}
+
+/* Home page styles */
+.home-main {
+    background-color: #dfff00;
+    color: #006400;
+}
+
+/* Mountain page styles */
+.mountain-main {
+    background-color: #e8f4f8;
+    color: #2c3e50;
+}
+
+/* Beach page styles */
+.beach-main {
+    background-color: #e6f3ff;
+    color: #00008b;
+}
+
+/* Shared styles */
+img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #4169e1;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.benefits, .technique {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+input, textarea, button {
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+button {
+    background-color: #32cd32;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2e8b57;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #32cd32;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
     }
-  
-    .hero-image {
-      background-image: url("https://media.istockphoto.com/id/948032164/photo/ice-cream.jpg?s=612x612&w=0&k=20&c=EWy8rEsWVuv67-DWH0a-rAlI7GSy1FAU237yg1TwFKg=");
+
+    .benefits, .technique {
+        flex-basis: 100%;
     }
-  }
-  
-  /* Desktop styles */
-  @media (min-width: 1481px) {
-    body {
-      background-color: #7fff00; /* Chartreuse */
-      color: #006400; /* Dark green */
-    }
-  
-    .hero-image {
-      background-image: url("https://t3.ftcdn.net/jpg/01/94/58/96/360_F_194589639_QrC7pzqnyPtzlSNydJT7QDrWWO0kd1dt.jpg");
-    }
-  
-    .logo {
-      width: 33%;
-    }
-  }
+}
